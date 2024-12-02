@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="JGG">
+        <meta name="description" content="This page is about creating a technical documentation with HTML and apply CSS for styes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Technical Documentation Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <main id="main-doc">
+            <nav id="navbar">
+                <header><h1 class="nav-head">HTML Introduction</h1></header>
+                <a href="#HTML" class="nav-link">HTML</a>
+                <a href="#Element" class="nav-link">Element</a>
+                <a href="#Nesting" class="nav-link">Nesting</a>
+                <a href="#Attributes" class="nav-link">Attributes</a>
+                <a href="#Boolean" class="nav-link">Boolean</a>
+                <a href="#Document" class="nav-link">Document</a>
+                <a href="#Comment" class="nav-link">Comment</a>
+                <a href="#Summary" class="nav-link">Summary</a>
+                <a href="#Reference" class="nav-link">Reference</a>
+                
+                <!-- <ul>
+                    <li><a href="#HTML" class="nav-link">HTML</a></li>
+                    <li><a href="#Element" class="nav-link">Element</a></li>
+                    <li><a href="#Nesting" class="nav-link">Nesting HTML Elements</a></li>
+                    <li><a href="#Attributes" class="nav-link">Attributes</a></li>
+                    <li><a href="#Boolean" class="nav-link">Boolean</a></li>
+                    <li><a href="#Document" class="nav-link">Document</a></li>
+                    <li><a href="#Comment" class="nav-link">Comment</a></li>
+                    <li><a href="#Summary" class="nav-link">Summary</a></li>
+                    <li><a href="#Reference" class="nav-link">Reference</a></li>
+                </ul> -->
+            </nav>
+
+            <header></header>
+
+            <section class="main-section" id="HTML">
+                <header><h1>HTML</h1></header>
+                <p>
+                    HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on.
+                </p>
+                <p>
+                    If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph <code>&lt;p&gt;</code> element:
+                </p>
+
+                <code>
+                    &lt;p&gt;My cat is very grumpy&lt;p&gt;
+                </code>
+                
+            </section>
+            <section class="main-section" id="Element">
+                <header><h1>Element</h1></header>
+                <p>
+                    Let's further explore our paragraph element from the previous section:
+                </p>
+                <p>
+                    <code>
+                        &lt;p&gt;My cat is very grumpy&lt;p&gt;
+                    </code>
+                </p>
+                <p>
+                    The anatomy of our element is the opening tag, followed by content, followed by the closing tag:
+                    <ul>
+                        <li>The opening tag: This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                        <li>The content: This is the content of the element. In this example, it is the paragraph text.</li>
+                        <li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+                    </ul>
+                </p>
+            </section>
+            <section class="main-section" id="Nesting">
+                <header><h1>Nesting</h1></header>
+                <p>
+                    Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word very in a <code>&lt;strong&gt;</code> element, which means that the word is to have strong(er) text formatting:
+                </p>
+                <p>
+                    Example:
+                    <code>
+                        &lt;p&gt;My cat is &lt;strong&gt;very&lt;strong&gt; grumpy.&lt;p&gt;
+                    </code>
+                </p>
+                <p>
+                    There is a right and wrong way to do nesting. In the example above, we opened the p element first, then opened the strong element. For proper nesting, we should close the strong element first, before closing the p.
+                </p>
+                <p>
+                    The following is an example of the wrong way to do nesting:
+                </p>
+                <code>
+                    &lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;
+                </code>
+                <p>The tags have to open and close in a way that they are inside or outside one another. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.</p>
+            </section>   
+            <section class="main-section" id="Attributes">
+                <header><h1>Attributes</h1></header>
+                <p>
+                    Elements can also have attributes. Attributes look like this:
+                </p>
+                <p>
+                    <code>
+                        &lt;p class="editor-note"&gt;My cat is very grumpy&lt;p&gt;
+                    </code>
+                </p>
+                <p>
+                    Attributes contain extra information about the element that won't appear in the content. In this example, the class attribute is an identifying name used to target the element with style information.
+                </p>
+                <p>
+                    An attribute should have:
+                    <ul>
+                        <li>A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)</li>
+                        <li>The attribute name, followed by an equal sign.</li>
+                        <li>An attribute value, wrapped with opening and closing quote marks.</li>
+                    </ul>
+                </p>
+            </section>
+            <section class="main-section" id="Boolean">
+                <header><h1>Boolean</h1></header>
+                <p>
+                    Sometimes you will see attributes written without values. This is entirely acceptable. These are called Boolean attributes. Boolean attributes can only have one value, which is generally the same as the attribute name. For example, consider the disabled attribute, which you can assign to form input elements. (You use this to disable the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.) For example:
+                </p>
+                <code>
+                    &lt;!-- using the disabled attribute prevents the end user from entering text into the input box --&gt;<br>
+                    &lt;input type="text" disabled&gt;<br><br>
+
+                    &lt;!-- text input is allowed, as it doesn't contain the disabled attribute --&gt;<br>
+                    &lt;input type="text"&gt;
+                </code>
+                <p>
+                    For reference, the example above also includes a non-disabled form input element. The HTML from the example above produces this result:
+                </p>
+            </section>   
+            <section class="main-section" id="Document">
+                <header><h1>Document</h1></header>
+                <p>
+                    Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:
+                </p>
+                <p>
+                    <code>
+                        &lt;!doctype html&gt;<br>
+                        &lt;html lang="en-US"&gt;<br>
+                            &lt;head&gt;<br>
+                                &lt;meta charset="utf-8"&gt;<br>
+                                &lt;title&gt;My test page&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                                &lt;p&gt;This is my page&lt;/p&gt;<br>
+                            &lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </code>
+                    <ol>
+                        <li><code>&lt;!DOCTYPE html&gt;</code> The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:</li>
+                        <li><code>&lt;html&gt;&lt;/html&gt;: The &lt;html&gt;</code> element. This element wraps all the content on the page. It is sometimes known as the root element.</li>
+                        <li><code>&lt;head&gt;&lt;/head&gt;: The &lt;head&gt;</code> element. This element acts as a container for everything you want to include on the HTML page, that isn't the content the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You will learn more about this in the next article of the series.</li>
+                        <li><code>&lt;meta charset="utf-8"&gt;: The &lt;meta&gt;</code> element. This element represents metadata that cannot be represented by other HTML meta-related elements, like <code>&lt;base&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;, &lt;title&gt;</code>. The charset attribute specifies the character encoding for your document as UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.</li>
+                        <li><code>&lt;title&lt;/title&gt;: The &lt;title&gt;</code> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.</li>
+                        <li><code>&lt;body&gt;&lt;/body&gt;: The &lt;body&gt;</code> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.</li>
+                    </ol>
+                </p>
+            </section>   
+            <section class="main-section" id="Comment">
+                <header><h1>Comment</h1></header>
+                <p>
+                    HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments invisible to the user. The purpose of comments is to allow you to include notes in the code to explain your logic or coding. This is very useful if you return to a code base after being away for long enough that you don't completely remember it. Likewise, comments are invaluable as different people are making changes and updates.
+                </p>
+                <p>
+                    To write an HTML comment, wrap it in the special markers <code>&lt;!-- and --&gt;</code>. For example:<br><br>
+                    <code>
+                        &lt;p&gt;I'm not inside a comment&lt;/p&gt;<br>
+                        &lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;
+                    </code>
+                </p>
+                <p>As you can see below, only the first paragraph is displayed in the live output.</p>
+            </section>
+            <section class="main-section" id="Summary">
+                <header><h1>Summary</h1></header>
+                <p>
+                    You made it to the end of the article! We hope you enjoyed your tour of the basics of HTML.
+                </p>
+                <p>
+                    At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.
+                </p>
+                <ul>
+                    <li>
+                        As you start to learn more about HTML, consider learning the basics of CSS (Cascading Style Sheets). CSS is the language used to style web pages, such as changing fonts or colors or altering the page layout. HTML and CSS work well together, as you will soon discover.
+                    </li>
+                </ul>
+            </section>  
+            <section class="main-section" id="Reference">
+                <header><h1>Reference</h1></header>
+                <p>
+                    <ul>
+                        <li>
+                            All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a>
+                        </li>
+                    </ul>
+                    
+                </p>
+            </section>   
+        </main> 
+    </body>
+</html>
